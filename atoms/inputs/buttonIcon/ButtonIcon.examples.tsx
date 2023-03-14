@@ -1,0 +1,20 @@
+import React from 'react';
+import { ButtonIcon } from './ButtonIcon';
+
+export const DefaultExample: React.FC = () => <ButtonIcon iconName="download" />;
+export const DisabledExample: React.FC = () => <ButtonIcon disabled iconName="download" />;
+export const BorderExample: React.FC = () => <ButtonIcon border iconName="download" />;
+export const PrimaryExample: React.FC = () => <ButtonIcon color="primary" iconName="download"/>;
+export const SecondaryExample: React.FC = () => <ButtonIcon color="secondary" iconName="download"/>;
+export const AccentExample: React.FC = () => <ButtonIcon color="accent" iconName="download"/>;
+export const SuccessExample: React.FC = () => <ButtonIcon color="success" iconName="download"/>;
+export const WarningExample: React.FC = () => <ButtonIcon color="warning" iconName="download"/>;
+export const DangerExample: React.FC = () => <ButtonIcon color="danger" iconName="download"/>;
+export const TextExample: React.FC = () => <ButtonIcon color="text" iconName="download"/>;
+export const GhostExample: React.FC = () => <ButtonIcon color="ghost" iconName="download"/>;
+export const BrandGreenExample: React.FC = () => <ButtonIcon color="brandGreen" iconName="download"/>;
+export const HrefExample: React.FC = () => <ButtonIcon href="https://www.google.com" iconName="download"/>;
+export const LoadingExample: React.FC = () => <ButtonIcon loading iconName="download"/>;
+export const LargeExample: React.FC = () => <ButtonIcon size="l" iconName="download"/>;
+export const MediumExample: React.FC = () => <ButtonIcon size="m" iconName="download"/>;
+export const SmallExample: React.FC = () => <ButtonIcon size="s" iconName="download"/>;

@@ -1,0 +1,28 @@
+import React from 'react';
+import { Button } from './Button';
+
+export const ActiveExample: React.FC = () => <Button label="active" />;
+export const DisabledExample: React.FC = () => <Button disabled label="disabled" />;
+export const PrimaryExample: React.FC = () => <Button color="primary" label="primary" />;
+export const SecondaryExample: React.FC = () => <Button color="secondary" label="secondary" />;
+export const AccentExample: React.FC = () => <Button color="accent" label="accent" />;
+export const SuccessExample: React.FC = () => <Button color="success" label="success" />;
+export const WarningExample: React.FC = () => <Button color="warning" label="warning" />;
+export const DangerExample: React.FC = () => <Button color="danger" label="danger" />;
+export const TextExample: React.FC = () => <Button color="text" label="text" />;
+export const GhostExample: React.FC = () => <Button color="ghost" label="ghost" />;
+export const BrandGreenExample: React.FC = () => <Button color="brandGreen" label="brandGreen" />;
+export const FillExample: React.FC = () => <Button fill label="fill" />;
+export const NoFillExample: React.FC = () => <Button label="no fill"/>;
+export const NoHrefExample: React.FC = () => <Button label="no href" />;
+export const HrefExample: React.FC = () => <Button href="https://www.google.com" label="has href" />;
+export const NoIconExample: React.FC = () => <Button label="no icon" />;
+export const IconExample: React.FC = () => <Button iconName="download" label="icon"/>;
+export const LeftIconExample: React.FC = () => <Button iconName="download" iconSide="left" label="left" />;
+export const RightIconExample: React.FC = () => <Button iconName="download" iconSide="right" label="right" />;
+export const NotLoadingExample: React.FC = () => <Button label="not loading" />;
+export const LoadingExample: React.FC = () => <Button label="loading" loading />;
+export const LargeExample: React.FC = () => <Button label="large" size="l" />;
+export const SmallExample: React.FC = () => <Button label="small" size="s" />;
+export const DefaultShapeExample: React.FC = () => <Button label="default" />;
+export const OvalShapeExample: React.FC = () => <Button label="oval" shape="oval"/>;

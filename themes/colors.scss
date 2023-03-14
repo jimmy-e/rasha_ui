@@ -1,0 +1,42 @@
+@import '@elastic/eui/src/global_styling/variables/colors';
+@import '@elastic/eui/src/global_styling/functions/colors';
+
+// ----- GRAYSCALE ----- //
+
+$white: #FFFFFF;
+$lightestGray: #F5F7FA;
+$lightGray: #E0E6EB;
+$gray: #98A2B3;
+$darkGray: #50687C;
+$darkestGray: #28343E;
+$black: #000000;
+
+// ----- COLORS ----- //
+// Note: using these color variables should be avoided in favor of using the theme color
+// declarations
+
+$blue: #0270D4;
+$green: #21B59A;
+$orange: #F8934A;
+$purple: #9E28FB;
+$red: #BD271E;
+
+// ----- THEME COLORS ----- //
+
+$colorPrimary: $blue;
+$colorSecondary: $green;
+$colorAccent: $purple;
+$colorSuccess: $green;
+$colorWarning: $orange;
+$colorDanger: $red;
+$colorSubdued: $gray;
+
+// ----- TEXT COLORS ----- //
+
+$colorPrimaryText: makeHighContrastColor($colorPrimary);
+$colorSecondaryText: makeHighContrastColor($colorSecondary);
+$colorAccentText: makeHighContrastColor($colorAccent);
+$colorWarningText: makeHighContrastColor($colorWarning);
+$colorDangerText: makeHighContrastColor($colorDanger, $lightGray);
+$colorSuccessText: $colorSecondaryText;
+$colorSubduedText: makeHighContrastColor($gray);

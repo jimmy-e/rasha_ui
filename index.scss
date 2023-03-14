@@ -1,0 +1,186 @@
+@import "themes/animations";
+@import "themes/colors";
+@import "themes/sizes";
+
+// The following are all the color variables to make it easier to find and change the style.
+
+// Core
+$euiColorPrimary: $colorPrimary;
+$euiColorSecondary: $colorSecondary;
+$euiColorAccent: $colorAccent;
+
+// Status
+$euiColorSuccess: $colorSuccess;
+$euiColorWarning: $colorWarning;
+$euiColorDanger: $colorDanger;
+
+// Grays
+$euiColorEmptyShade: $white;
+$euiColorLightestShade: $lightestGray;
+$euiColorLightShade: $lightGray;
+$euiColorMediumShade: $gray;
+$euiColorDarkShade: $darkGray;
+$euiColorDarkestShade: $darkestGray;
+$euiColorFullShade: $black;
+
+// Contrasty text variants
+$euiColorPrimaryText: $colorPrimaryText;
+$euiColorSecondaryText: $colorSecondaryText;
+$euiColorAccentText: $colorAccentText;
+$euiColorWarningText: $colorWarningText;
+$euiColorDangerText: $colorDangerText;
+$euiColorSuccessText: $colorSuccessText;
+$euiColorSubduedText: $colorSubduedText;
+
+// Light theme
+@import '~@elastic/eui/src/themes/eui/eui_colors_light';
+
+// Global styling
+@import '~@elastic/eui/src/global_styling/index';
+
+// Components
+@import '~@elastic/eui/src/components/index';
+
+// Packages
+@import '~@elastic/eui/packages/index';
+
+.euiCallOutHeader__title h3 {
+  color: $colorPrimaryText;
+  font-weight: 300;
+  line-height: 40px;
+
+  svg {
+    position: relative;
+    top: 2px;
+    margin-right: 6px;
+  }
+}
+
+/* Allows select to be full width without nesting it in form and form row elements */
+.euiSuperSelect--fullWidth {
+  width: 100%;
+}
+
+.notification {
+  &::before {
+    @include euiBottomShadowLarge($adjustBorders: false);
+  }
+  border-bottom: 1px solid tint($euiShadowColorLarge, 55%);
+}
+
+/* Buttons on the default background surface are transparent */
+.euiButton,
+.euiButtonGroup__buttons,
+.euiFieldSearch {
+  background-color: white;
+  min-width: 30px; /* Allow for more narrow buttons */
+}
+
+/* Remove focus ring on selectable lists */
+.euiSelectableList:focus-within {
+  animation: unset !important;
+}
+
+/* Prevent lingering hover color */
+.euiSelectableListItem-isFocused:not([aria-disabled='true']) {
+  color: $darkestGray;
+  background-color: white;
+}
+
+.euiSelectableListItem-isFocused:not([aria-disabled='true']) .euiSelectableListItem__text {
+  text-decoration: none;
+}
+
+/* Slightly darker background color so it stands out against the background */
+.euiTableRow-isExpandedRow .euiTableCellContent {
+  background-color: $lightestGray;
+}
+
+/* Tooltip icons are off center when displayed in forms */
+.euiFormRow__label .euiToolTipAnchor .euiIcon--medium {
+  margin-top: -2px;
+}
+
+.euiPage {
+  height: 100%;
+  flex: 1 1 auto;
+  overflow: auto;
+  padding: 0 !important;
+}
+
+.euiDatePopover {
+  z-index: 8000;
+  background-color: #fff;
+}
+
+.euiUnstyledLink {
+  text-decoration: none;
+  outline: none;
+  &:focus,
+  &:visited,
+  &:link,
+  &:active {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.euiTooltip--fullWidth {
+  min-width: fit-content;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.euiTextField--dirty {
+  background-color: #fff7c6;
+}
+
+/* ZenDesk Widget */
+body.euiBody--hasFlyout #launcher, body.hideZenDesk #launcher {
+  transition: all $euiAnimSpeedFast $euiAnimSlightResistance !important;
+  bottom: -65px !important;
+}
+
+@media print {
+  #launcher, #launcher * {
+    display:none;
+  }
+}
+
+/* Reduces height of wrapper to accommodate help button */
+.euiFlyout--reducedHeight {
+  margin-bottom: 45px;
+
+  .euiFlyoutBody__overflow {
+    overflow-y: overlay;
+    height: 85vh;
+  }
+}
+
+.react-grid-Main {
+  height: 100%;
+}
+
+.react-grid-Container {
+  height: 100%;
+}
+
+.react-grid-Grid {
+  min-height: 100% !important;
+}
+
+.react-grid-Canvas {
+  height: 100% !important;
+}
+
+.documents-table-filter-panel-row {
+  .euiTableCellContent {
+    padding: 0;
+  }
+}
+
+.document-table-checkbox-cell {
+  .euiTableCellContent {
+    padding-right: 4px;
+  }
+}
